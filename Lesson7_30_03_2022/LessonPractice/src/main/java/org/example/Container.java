@@ -35,7 +35,7 @@ public class Container {
                 objects.put(element,createObj(field.getType()));
             }
         }
-        Constructor constructor = element.getConstructor();
+        Constructor constructor = element.getDeclaredConstructor();
         if (!constructor.isAccessible()) {
             constructor.setAccessible(true);
         }
